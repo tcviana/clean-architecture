@@ -7,7 +7,7 @@ import javax.validation.constraints.Pattern;
 
 @AllArgsConstructor
 @Getter
-public class Telephone {
+public class Phone {
 
     @Pattern(regexp = "^[0-9]{14}$")
     private Integer number;
