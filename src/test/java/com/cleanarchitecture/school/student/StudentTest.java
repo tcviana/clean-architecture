@@ -4,26 +4,45 @@ package com.cleanarchitecture.school.student;
 import com.cleanarchitecture.school.domain.student.PhoneExceeded;
 import com.cleanarchitecture.school.domain.student.Student;
 import com.cleanarchitecture.school.domain.student.Phone;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class StudentTest {
 
-    @Test
-    public void shouldExceptionAddThreeTelephones() throws Exception {
-        final Student student = new Student("test@test.com", "45645678910", "Benedito", null);
-        final Phone telephone = new Phone(1232212355);
-        final Phone telephone2 = new Phone(1243352345);
-        final Phone telephone3 = new Phone(1245454566);
-        student.addTelephone(telephone);
-        student.addTelephone(telephone2);
+    private Student student;
 
-        try {
-            student.addTelephone(telephone3);
-        } catch (PhoneExceeded e){
-            assertThat(student.getPhone().size(), equalTo(2));
-        }
+    @BeforeEach
+    private void createStudent() {
+        this.student = new Student("test@test.com", "45645678910", "Benedito");
+    }
+
+    @Test
+    public void shouldEnrollStudent() {
+        this.student.addTelephone(new Phone(1232123421));
+        assertEquals("Benedito", student.getName());
+        assertEquals("45645678910", student.getCpfUnformattedValue());
+        assertEquals("456.456.789-10", student.getCpfValue());
+        assertEquals("test@test.com", student.getEmail());
+    }
+
+    @Test
+    public void shouldAddTwoPhones() {
+        this.student.addTelephone(new Phone(1232212355));
+        this.student.addTelephone(new Phone(1232212356));
+        assertEquals(2, this.student.getPhone().size());
+    }
+
+    @Test
+    public void shouldExceptionAddThreePhones() throws Exception {
+        assertThrows(PhoneExceeded.class, () -> {
+            student.addTelephone(new Phone(1232212355));
+            student.addTelephone(new Phone(1243352345));
+            student.addTelephone(new Phone(1245454566));
+        });
+
     }
 }

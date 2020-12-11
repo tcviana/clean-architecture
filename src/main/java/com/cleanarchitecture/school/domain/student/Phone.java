@@ -1,3 +1,13 @@
+/**
+ *
+ * Esta classe representa o telefone de uma entidade
+ *
+ * Value Object
+ *
+ * @author Tiago Viana
+ * @version 1.0
+ */
+
 package com.cleanarchitecture.school.domain.student;
 
 import lombok.AllArgsConstructor;
