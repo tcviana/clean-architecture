@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
 public class StudentTest {
 
     private Student student;
@@ -22,7 +21,8 @@ public class StudentTest {
 
     @Test
     public void shouldEnrollStudent() {
-        this.student.addTelephone(new Phone(1232123421));
+        this.student.addTelephone("1232123421");
+
         assertEquals("Benedito", student.getName());
         assertEquals("45645678910", student.getCpfUnformattedValue());
         assertEquals("456.456.789-10", student.getCpfValue());
@@ -31,17 +31,17 @@ public class StudentTest {
 
     @Test
     public void shouldAddTwoPhones() {
-        this.student.addTelephone(new Phone(1232212355));
-        this.student.addTelephone(new Phone(1232212356));
+        this.student.addTelephone("1232212356");
+        this.student.addTelephone("1232212355");
         assertEquals(2, this.student.getPhone().size());
     }
 
     @Test
     public void shouldExceptionAddThreePhones() throws Exception {
         assertThrows(PhoneExceeded.class, () -> {
-            student.addTelephone(new Phone(1232212355));
-            student.addTelephone(new Phone(1243352345));
-            student.addTelephone(new Phone(1245454566));
+            student.addTelephone("1232212355");
+            student.addTelephone("1243352345");
+            student.addTelephone("1245454566");
         });
 
     }
