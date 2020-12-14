@@ -1,4 +1,8 @@
 package com.cleanarchitecture.school.domain.events;
 
-public class Event {
+import java.time.LocalDateTime;
+
+public interface Event {
+
+    LocalDateTime moment();
 }
