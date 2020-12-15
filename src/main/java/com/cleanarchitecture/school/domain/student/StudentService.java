@@ -1,7 +1,7 @@
 package com.cleanarchitecture.school.domain.student;
 
-import com.cleanarchitecture.school.domain.events.Event;
 import com.cleanarchitecture.school.domain.events.EventPublisher;
+import com.cleanarchitecture.school.domain.events.Event;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

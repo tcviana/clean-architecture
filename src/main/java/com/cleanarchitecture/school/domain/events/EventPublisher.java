@@ -1,7 +1,5 @@
 package com.cleanarchitecture.school.domain.events;
 
-import lombok.NoArgsConstructor;
-
 import java.util.LinkedHashSet;
 import java.util.Set;
 
