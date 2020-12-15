@@ -1,5 +1,6 @@
 package com.cleanarchitecture.school.domain.student;
 
+import com.cleanarchitecture.school.application.GenerateStampForNewStudent;
 import com.cleanarchitecture.school.domain.events.EventPublisher;
 import com.cleanarchitecture.school.domain.events.Event;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +17,7 @@ public class StudentService {
     private void publishEvent(Event event) {
         final EventPublisher publisher = new EventPublisher();
         publisher.addListener(new StudentEnrolledLog());
+        publisher.addListener(new GenerateStampForNewStudent());
         publisher.publish(event);
     }
 

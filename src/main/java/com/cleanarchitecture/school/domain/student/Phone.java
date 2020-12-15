@@ -1,6 +1,6 @@
 /**
  *
- * Esta classe representa o telefone de uma entidade
+ * Esta classe representa o telefone de um aluno
  *
  * Value Object
  *

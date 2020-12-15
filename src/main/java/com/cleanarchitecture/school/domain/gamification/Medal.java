@@ -3,6 +3,7 @@ package com.cleanarchitecture.school.domain.gamification;
 import com.cleanarchitecture.school.domain.student.Student;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -30,8 +31,9 @@ public class Medal {
     @Enumerated(EnumType.STRING)
     private Stamp stamp;
 
-    @Column(name = "ID_STUDENT")
-    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @ManyToOne
+    @Setter
+    @JoinColumn(name = "ID_STUDENT")
     private Student student;
 
     @CreatedDate
