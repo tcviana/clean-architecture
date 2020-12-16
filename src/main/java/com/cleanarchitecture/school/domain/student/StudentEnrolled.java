@@ -1,17 +1,15 @@
 package com.cleanarchitecture.school.domain.student;
 
 import com.cleanarchitecture.school.domain.events.Event;
-import com.cleanarchitecture.school.infra.events.TypeEvent;
-import lombok.Getter;
+import com.cleanarchitecture.school.infra.TypeEvent;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * A classe {@link StudentEnrolled} registra o evento de matrículo de aluno
+ * A classe {@link StudentEnrolled} registra o evento de aluno matriculado
  *
  * @author Tiago Coutinho Viana
  * @version 1.0

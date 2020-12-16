@@ -1,5 +1,12 @@
 package com.cleanarchitecture.school.domain.events;
 
+/**
+ * A classe {@link Listener} é responsável por ouvir os serviços da aplicação e disparar os {@link Event}
+ *
+ * @author Tiago Coutinho Viana
+ * @version 1.0
+ */
+
 public abstract class Listener {
 
     public void process(Event event) {

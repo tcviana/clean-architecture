@@ -11,6 +11,13 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ *  A classe {@link StudentServiceTest} valida os serviços do {@link Student}
+ *
+ * @author Tiago Coutinho Viana
+ * @version 1.0
+ */
+
 @SpringBootTest
 public class StudentServiceTest {
 

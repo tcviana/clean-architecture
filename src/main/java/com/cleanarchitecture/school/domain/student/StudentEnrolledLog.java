@@ -2,7 +2,7 @@ package com.cleanarchitecture.school.domain.student;
 
 import com.cleanarchitecture.school.domain.events.Event;
 import com.cleanarchitecture.school.domain.events.Listener;
-import com.cleanarchitecture.school.infra.events.TypeEvent;
+import com.cleanarchitecture.school.infra.TypeEvent;
 
 /**
  * A classe {@link StudentEnrolledLog} gera um log de cadastro de novo aluno

@@ -11,6 +11,9 @@ import java.util.regex.Pattern;
 /**
  * A classe {@link Cpf} representa o número do <b>Cadastro de Pessoa Física</b>, que identifica uma pessoa física
  * junto a Receita Federal brasileira
+ *
+ * @author Tiago Coutinho Viana
+ * @version 1.0
  */
 
 @Embeddable

@@ -18,6 +18,13 @@ import javax.persistence.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * A classe {@link Phone} representa o telefone do {@link Student}
+ *
+ * @author Tiago Coutinho Viana
+ * @version 1.0
+ */
+
 @NoArgsConstructor
 @Getter
 @Entity
