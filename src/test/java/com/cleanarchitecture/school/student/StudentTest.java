@@ -3,7 +3,6 @@ package com.cleanarchitecture.school.student;
 
 import com.cleanarchitecture.school.domain.student.PhoneExceeded;
 import com.cleanarchitecture.school.domain.student.Student;
-import com.cleanarchitecture.school.domain.student.Phone;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

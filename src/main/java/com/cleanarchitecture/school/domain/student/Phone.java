@@ -1,6 +1,6 @@
 /**
  *
- * Esta classe representa o telefone de uma entidade
+ * Esta classe representa o telefone de um aluno
  *
  * Value Object
  *
@@ -13,11 +13,17 @@ package com.cleanarchitecture.school.domain.student;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+/**
+ * A classe {@link Phone} representa o telefone do {@link Student}
+ *
+ * @author Tiago Coutinho Viana
+ * @version 1.0
+ */
 
 @NoArgsConstructor
 @Getter

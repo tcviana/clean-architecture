@@ -1,13 +1,3 @@
-/**
- *
- * Esta classe representa o aluno contendo seus dados pessoais.
- *
- * Aggregate Root
- *
- * @author: Tiago Viana
- * @version: 1.0
- */
-
 package com.cleanarchitecture.school.domain.student;
 
 import lombok.*;
@@ -17,6 +7,15 @@ import javax.validation.constraints.Email;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+/**
+ * A classe {@link Student} representa o aluno contendo seus dados pessoais.
+ *
+ * Aggregate Root
+ *
+ * @author: Tiago Coutinho Viana
+ * @version: 1.0
+ */
 
 @NoArgsConstructor
 @Getter
