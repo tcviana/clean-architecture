@@ -2,7 +2,7 @@ package com.cleanarchitecture.school.student;
 
 
 import com.cleanarchitecture.school.domain.student.Student;
-import com.cleanarchitecture.school.domain.student.StudentService;
+import com.cleanarchitecture.school.application.StudentApplicationService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,17 +12,17 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- *  A classe {@link StudentServiceTest} valida os serviços do {@link Student}
+ *  A classe {@link StudentApplicationServicesTest} valida os serviços do {@link Student}
  *
  * @author Tiago Coutinho Viana
  * @version 1.0
  */
 
 @SpringBootTest
-public class StudentServiceTest {
+public class StudentApplicationServicesTest {
 
     @Autowired
-    StudentService service;
+    StudentApplicationService service;
 
     @Test
     public void shouldEnrollStudent() {
