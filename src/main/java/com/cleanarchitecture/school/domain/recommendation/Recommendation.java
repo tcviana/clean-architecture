@@ -2,6 +2,7 @@ package com.cleanarchitecture.school.domain.recommendation;
 
 import com.cleanarchitecture.school.domain.student.Student;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 
@@ -15,23 +16,28 @@ import java.time.LocalDateTime;
  * @version 1.0
  */
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "RECOMMENDATION")
+@Getter
 public class Recommendation {
 
     @Id
-    @Column(name = "INDICATED")
+    @JoinColumn(name = "INDICATED")
     @OneToOne
     private Student indicated;
 
     @Id
-    @Column(name = "INDICATIVE")
     @ManyToOne
+    @JoinColumn(name = "INDICATIVE")
     private Student indicative;
 
     @CreatedDate
     @Column(name = "CREATED")
     private LocalDateTime created;
+
+    public Recommendation(Student indicated, Student indicative) {
+        this.indicated = indicated;
+        this.indicative = indicative;
+    }
 }
